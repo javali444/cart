@@ -1,5 +1,7 @@
 @Library('shared-library@main') _
 
+nodejs.lintChecks()
+
 pipeline{
 
   agent any
@@ -7,9 +9,10 @@ pipeline{
   stages{
     stage('Lint Check'){
       steps {
-              script{
-                nodejs.lintChecks()
-              }
+              sh '''
+               # ~/node_modules/jslint/bin/jslint.js server.js
+               echo 'Lint checks will be handled by Dev Team'
+              '''
             }
     }
 
