@@ -6,7 +6,7 @@ pipeline{
     stage('Lint Check'){
       steps {
               sh '''
-                echo cart component
+                ~/node_modules/jslint/bin/jslint.js server.js
               '''
             }
     }
