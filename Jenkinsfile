@@ -8,7 +8,7 @@ pipeline{
     stage('Lint Check'){
       steps {
               script{
-                nodejs.LintChecks()
+                nodejs.lintChecks()
               }
             }
     }
