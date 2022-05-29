@@ -1,7 +1,3 @@
-@Library('shared-library@main') _
-
-nodejs.lintChecks()
-
 pipeline{
 
   agent any
